@@ -1,0 +1,85 @@
+.models-section {
+  padding: 56px 0 48px;
+  font-family: 'Mier Bold', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.models-section__title {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #1a1a18;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+
+/* ── grid ── */
+.models-grid {
+  display: flex;
+  padding: 0 20px;
+  gap: 0;
+}
+
+/* on grid hover → all cards fade */
+.models-grid:hover .model-card {
+  opacity: 0.25;
+}
+
+/* hovered card stays full */
+.models-grid:hover .model-card:hover {
+  opacity: 1;
+}
+
+/* ── card ── */
+.model-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: opacity 0.35s ease;
+}
+
+.model-card__image {
+  aspect-ratio: 1 / 1;
+  background: #ebebea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.model-card__image img {
+  width: 105%;
+  height: 155%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.model-card:hover .model-card__image img {
+  transform: scale(1.04);
+}
+
+.model-card__name {
+  font-size: 12px;
+  font-weight: 400;
+  color: #1a1a18;
+  letter-spacing: 0.03em;
+  padding: 0 2px;
+}
+
+/* ── responsive ── */
+@media (max-width: 768px) {
+  .models-grid {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .model-card {
+    flex: 0 0 50%;
+    padding: 0 6px;
+    margin-bottom: 20px;
+  }
+}

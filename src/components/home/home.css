@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homepage {
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  z-index: 100;
+
+  /* keep navbar transparent like screenshot */
+  background: transparent;
+}
+
+/* LINKS */
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+
+  padding: 6px 10px;
+  border-radius: 2px;
+
+  transition: all 0.35s ease;
+}
+
+/* ⭐ ONLY HOVER EFFECT (IMPORTANT) */
+.nav-link:hover {
+  background: white;
+  color: black;
+}
+
+/* optional smooth feel */
+.nav-link {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.nav-left,
+.nav-right {
+  flex: 1;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.logo {
+  font-size: 14px;
+  letter-spacing: 0.25em;
+}
+
+.logo-sub {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+/* Hero */
+
+.hero {
+  height: 100vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* Optional dark overlay */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* brightness + soft dark layer */
+  background: rgba(0, 0, 0, 0.08);
+
+  /* optional extra control */
+  backdrop-filter: brightness(1.15);
+}
+.info-card {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  margin-bottom: 80px;
+
+  background: rgba(255, 255, 255, 0.95);
+  min-width: 380px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-left {
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.info-right {
+  padding: 20px;
+}
+
+.info-right p {
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+/* Cart Modal */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-card {
+  background: white;
+  width: 400px;
+  max-width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 40px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.cart-overlay.active .cart-card {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.cart-header h2 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1a18;
+  font-family: 'Inter', sans-serif;
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  color: #1a1a18;
+}
+
+.cart-empty {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.cart-empty p {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+}

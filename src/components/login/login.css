@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fafaf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 20px;
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1a18;
+  margin-bottom: 40px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a18;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-bottom-color: #1a1a18;
+}
+
+.login-btn {
+  width: 100%;
+  background: #1a1a18;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #333;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+  color: #ddd;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+
+.login-divider span {
+  padding: 0 16px;
+}
+
+.register-link {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-link span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.register-btn {
+  width: 100%;
+  background: white;
+  color: #1a1a18;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.register-btn:hover {
+  border-color: #1a1a18;
+}
