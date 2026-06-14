@@ -22,7 +22,7 @@ export default function TokyoExclusive() {
             exceptionnellement notre boutique en ligne en très petites quantités.
           </p>
 
-          <a className="btn" href="#">
+          <a className="btn" href="/archives/tokyo">
             Découvrir la Loafer Tokyo
           </a>
         </div>

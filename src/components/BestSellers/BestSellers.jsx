@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function BestSellers() {
   const trackRef = useRef(null);
-  const [page, setPage] = useState(1);
+  const [setPage] = useState(1);
   const isDraggingRef = useRef(false);
   const startX = useRef(0);
   const startScrollLeft = useRef(0);
@@ -62,13 +62,12 @@ export default function BestSellers() {
       el.removeEventListener("mouseup", onMouseUp);
       el.removeEventListener("mouseleave", onMouseLeave);
     };
-  }, []);
+  }, [setPage]);
 
-  return (
+   return (
     <div className="wrapper">
       <div className="header">
         <h2>Our best-sellers</h2>
-        <a href="#">View all</a>
       </div>
 
       <div ref={trackRef} className="track">

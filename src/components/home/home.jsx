@@ -18,7 +18,7 @@ export default function HomePage() {
           {NAV_LINKS.map((link) => (
             <a
               key={link}
-              href="#"
+              href={`/${link}`}
               className={`nav-link ${active === link ? "active" : ""}`}
               onClick={(e) => {
                 e.preventDefault();
@@ -32,15 +32,15 @@ export default function HomePage() {
         </div>
 
         <div className="nav-center">
-          <a href="#">
-            <div className="logo">BELLEDONNE</div>
-            <div className="logo-sub">Paris</div>
-          </a>
+          <div>
+  <div className="logo">BELLEDONNE</div>
+  <div className="logo-sub">Paris</div>
+</div>
         </div>
 
         <div className="nav-right">
           <Link to="/login">Log in</Link>
-          <a href="#" onClick={(e) => { e.preventDefault(); setCartOpen(true); }}>Cart (0)</a>
+          <a href="/cart" onClick={(e) => { e.preventDefault(); setCartOpen(true); }}>Cart (0)</a>
         </div>
       </nav>
 
@@ -64,7 +64,7 @@ export default function HomePage() {
                 Belledonne elegance, from summer to the following seasons.
               </p>
 
-              <a href="#">To discover</a>
+              <a href="/archives">To discover</a>
             </div>
 
             <button
